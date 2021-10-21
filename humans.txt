@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Alexander Rusiecki -- web developer 
 
 # THANKS
 
