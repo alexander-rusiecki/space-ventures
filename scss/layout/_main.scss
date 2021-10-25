@@ -1,0 +1,10 @@
+@import '../abstracts/_variables';
+@import '../abstracts/mixins';
+
+main {
+  height: 100vh;
+  @include background-image('../img/material/images/space.jpg');
+
+  color: $font-white;
+  font-size: 0.8rem;
+}

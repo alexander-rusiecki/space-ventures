@@ -1,9 +1,9 @@
 @import 'base/_reset';
 @import 'layout/_header';
+@import 'layout/_main';
 @import 'abstracts/_variables';
 
 body {
   min-width: 100vw;
-  background-color: red;
   font-family: $font-family;
 }
