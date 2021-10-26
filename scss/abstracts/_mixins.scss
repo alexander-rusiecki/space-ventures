@@ -6,11 +6,13 @@
 }
 
 @mixin background-image($url) {
-  background: url($url) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  // background-attachment: fixed;
   background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
   overflow: hidden;
 }
-

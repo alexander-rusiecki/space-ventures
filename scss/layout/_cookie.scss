@@ -1,0 +1,25 @@
+@import '../abstracts/_variables';
+@import '../abstracts/mixins';
+
+footer {
+  background-color: rgb(5, 6, 29);
+  text-align: center;
+  div {
+    padding: 1em;
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+      color: $font-pink;
+      text-shadow: 0 0 20px $font-pink;
+    }
+
+    button {
+      margin-top: 1em;
+      padding: 0.4em;
+      color: white;
+      background-color: rgb(10, 17, 91);
+      width: 100%;
+      border: none;
+    }
+  }
+}

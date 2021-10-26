@@ -1,0 +1,77 @@
+@import '../abstracts/_variables';
+
+main {
+  min-height: 100vh;
+  padding: 2% 8%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../img/images/space-480.jpg');
+  color: $font-white;
+  font-size: 0.8rem;
+  z-index: -1;
+  .left {
+    .main-heading {
+      position: relative;
+
+      h2 {
+        // z-index: 1;
+        font-size: 4.2rem;
+
+        span {
+          color: $font-grey;
+          font-family: $secondary-font;
+          position: absolute;
+          top: 0.4em;
+          left: 0.5em;
+          top: -20px;
+          // right: -20px;
+          z-index: 2;
+        }
+      }
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    blockquote {
+      font-size: 1rem;
+      margin: 2em 1em;
+      &::before {
+        content: '\201C';
+      }
+      &::after {
+        content: '\201C';
+        content: '\201D';
+      }
+    }
+  }
+
+  // h2 span {
+  //   color: $font-grey;
+  //   font-family: $secondary-font;
+  //   position: absolute;
+  //   // top: -17px;
+  //   // right: -20px;
+  //   // z-index: -1;
+  // }
+
+  a {
+    color: $font-pink;
+    text-decoration: none;
+    font-style: 0.5rem;
+    position: relative;
+    &::after {
+      content: url('../img/icons/arrow-pink.svg');
+      position: absolute;
+      left: 14em;
+      top: 0.04em;
+      transition: left 0.1s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        left: 16em;
+      }
+    }
+  }
+  blockquote {
+    font-style: italic;
+  }
+}
