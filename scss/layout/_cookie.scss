@@ -1,25 +1,30 @@
 @import '../abstracts/_variables';
 @import '../abstracts/mixins';
 
-footer {
-  background-color: rgb(5, 6, 29);
+.cookie {
+  background-color: rgb(4, 6, 29);
   text-align: center;
-  div {
-    padding: 1em;
-    p {
-      font-size: 0.8rem;
-      margin: 0;
-      color: $font-pink;
-      text-shadow: 0 0 20px $font-pink;
-    }
+  margin-top: 2em;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: $font-pink;
+    text-shadow: 0 0 10px $font-pink;
+  }
 
-    button {
-      margin-top: 1em;
-      padding: 0.4em;
-      color: white;
-      background-color: rgb(10, 17, 91);
-      width: 100%;
-      border: none;
-    }
+  button {
+    margin-top: 1em;
+    padding: 0.4em;
+    color: white;
+    background-color: rgb(10, 17, 91);
+    width: 100%;
+    border: none;
+    cursor: pointer;
   }
 }
