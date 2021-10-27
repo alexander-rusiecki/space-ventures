@@ -1,11 +1,14 @@
-// Font family
+// Fonts
 $primary-font: 'Rubik', sans-serif;
 $secondary-font: 'Times New Roman', Times, serif;
 
-// Font color
+// Font colors
 $font-white: hsl(0, 33%, 97%);
 $font-pink: hsl(314, 100%, 41%);
 $font-grey: hsl(240, 1%, 65%);
 
-// Font size
+// Font sizes
 $font-light: 0.5rem;
+
+// Breakpoints
+$breakpoint-desktop: '1200px';

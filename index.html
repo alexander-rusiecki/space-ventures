@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <nav id="my-nav" class="overlay sr-only">
+  <nav id="my-nav" class="menu-hidden">
     <ul>
       <li>
         <a href="#">OUR STORY</a>
@@ -69,9 +69,10 @@
       </section>
     </div>
     <div class="main-right">
-      <section>
-        <blockquote class="sr-only">Persistence is very important. You should not give up unless you are forced to give
-          up. </blockquote>
+      <section class="main-right-content">
+        <blockquote id="hidden-quote">Persistence is very important. You should not give up unless
+          you
+          are forced to give up. </blockquote>
       </section>
       <section>
         <p>Am I sitting in a tin can. Far above the world. Planet Earth is blue. And there's nothing I can do. Though
@@ -80,15 +81,16 @@
         <p>Ground Control to Major Tom. Your circuit's dead, there's something wrong. Can you hear me, Major Tom? Can
           you hear me, Major Tom? Can you hear me, Major Tom? Can you "Here am I floating 'round my tin can. <br> Far
           above the moon <br> Planet Earth is blue <br> And there's nothing I can do</p>
-        <img src="img/images/major-tom-480.jpg" alt="Major Tom" class="sr-only">
+        <img src="img/images/major-tom-480.jpg" alt="Major Tom" id="hidden-image">
         <a href="#">Read more about Major Tom</a>
       </section>
     </div>
-    <section class="cookie">
-      <p>I don’t know where I’m going from here, but I promise it won’t be boring. You should accept cookies.</p>
-      <button>ACCEPT</button>
-    </section>
+
   </main>
+  <section class="cookie">
+    <p>I don’t know where I’m going from here, but I promise it won’t be boring. You should accept cookies.</p>
+    <button>ACCEPT</button>
+  </section>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>

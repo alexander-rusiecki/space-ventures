@@ -1,18 +1,18 @@
-@mixin flex-center($direction) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: $direction;
-}
+@import '_variables';
 
 @mixin background-image($url) {
   background-image: url($url);
   background-repeat: no-repeat;
   background-position: center center;
-  // background-attachment: fixed;
   background-size: cover;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   overflow: hidden;
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
 }

@@ -4,7 +4,7 @@
 .cookie {
   background-color: rgb(4, 6, 29);
   text-align: center;
-  margin-top: 2em;
+  padding-top: 1em;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -17,7 +17,6 @@
     color: $font-pink;
     text-shadow: 0 0 10px $font-pink;
   }
-
   button {
     margin-top: 1em;
     padding: 0.4em;

@@ -1,21 +1,71 @@
 @import '../abstracts/_variables';
+@import '../abstracts/_mixins';
 
 main {
-  padding: 0 8%;
+  padding: 1em 8%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../img/images/space-480.jpg');
   color: $font-white;
+  @include desktop {
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../img/images/space-1920.jpg');
+    display: flex;
+  }
+  .main-right-content #hidden-quote {
+    display: none;
+    @include desktop {
+      display: initial;
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.2rem;
+    }
+  }
+  .main-right #hidden-image {
+    display: none;
+    @include desktop {
+      display: initial;
+    }
+  }
+  @include desktop {
+    .main-left,
+    .main-right {
+      width: 50%;
+      padding: 1em 5em;
+    }
+    .main-left-content {
+      margin-top: 7em;
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+      }
+      blockquote {
+        font-size: 1.3rem;
+      }
+    }
+    .main-right-content {
+      margin-top: 7em;
+    }
+  }
   .main-heading {
     height: 20vh;
-
     header {
       height: 100%;
       padding-top: 1.5em;
     }
-
     h2 {
       font-size: 3.5em;
       margin: 0;
+      @include desktop {
+        font-size: 6rem;
+      }
       span {
         font-family: $secondary-font;
         color: $font-grey;
@@ -45,7 +95,6 @@ main {
       content: '\201D';
     }
   }
-
   a {
     color: $font-pink;
     text-decoration: none;
