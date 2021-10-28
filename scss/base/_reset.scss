@@ -330,6 +330,11 @@ textarea {
   }
 }
 
-.menu-hidden {
+nav {
   display: none;
+}
+
+.menu-open {
+  display: block;
+  position: fixed;
 }

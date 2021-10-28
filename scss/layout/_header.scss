@@ -10,28 +10,28 @@
   .hamburger-section {
     height: 5%;
     width: 100%;
-    margin-right: 1em;
-    padding: 0.6em 0;
+    padding: 0.5em 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
     position: fixed;
-    z-index: 999;
     background-color: rgba(238, 241, 242, 0.6);
     @include desktop {
-      height: 6%;
+      height: 8%;
     }
     .hamburger-button {
-      cursor: pointer;
       height: 100%;
       width: 10%;
-      padding-right: 1em;
-      margin: 0.6em 0;
+      margin-right: 1em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      cursor: pointer;
+      @include desktop {
+        height: 80%;
+      }
       span {
         height: 0.3em;
         width: 2.2em;
@@ -43,8 +43,11 @@
         }
       }
       span:nth-child(2) {
-        margin-right: 1em;
+        margin-right: 0.6em;
         transition: margin-right 0.1s ease-in-out;
+        @include desktop {
+          margin-right: 1.4em;
+        }
       }
       &:hover span:nth-child(2) {
         margin-right: 0em;
@@ -52,18 +55,18 @@
     }
   }
   .hero-heading {
+    height: 24%;
+    width: 38%;
     margin-top: 4em;
-    width: 40%;
-    height: 25%;
+    margin-left: 2.4em;
     text-align: center;
-    margin-left: 2em;
     border: 3px solid black;
     @include desktop {
-      margin-top: 6em;
-      width: 36%;
       height: 47%;
-      border: 4px solid black;
+      width: 36%;
+      margin-top: 6em;
       margin-left: 4em;
+      border: 4px solid black;
       background-color: rgba(255, 255, 255, 0.7);
     }
     header {
@@ -71,8 +74,8 @@
       h1 {
         margin: 0;
         @include desktop {
-          font-size: 6.5rem;
           margin-top: 0.6em;
+          font-size: 6.5rem;
           line-height: 1.3em;
         }
         span {
@@ -84,24 +87,24 @@
       }
     }
     a {
+      margin-top: 1em;
+      margin-left: 1em;
+      display: flex;
+      align-items: center;
       position: relative;
       text-decoration: none;
       color: inherit;
       font-size: 0.6rem;
-      display: flex;
-      align-items: center;
-      margin-top: 1em;
-      margin-left: 1em;
       @include desktop {
-        font-size: 1rem;
-        margin-left: 17em;
         margin-top: -2em;
+        margin-left: 17em;
+        font-size: 1rem;
       }
       &::after {
         content: url('../img/icons/arrow-black.svg');
         position: absolute;
-        left: 8em;
-        top: 0;
+        left: 7.5em;
+        top: 0.2em;
         transition: left 0.1s ease-in-out;
       }
       &:hover {

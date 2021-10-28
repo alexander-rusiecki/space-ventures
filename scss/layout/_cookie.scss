@@ -11,6 +11,9 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  @include desktop {
+    height: 6vh;
+  }
   p {
     font-size: 0.8rem;
     margin: 0;

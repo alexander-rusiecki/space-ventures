@@ -2,21 +2,127 @@
 @import '../abstracts/_mixins';
 
 main {
-  padding: 1em 8%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../img/images/space-480.jpg');
+  padding: 2em 8%;
   color: $font-white;
   @include desktop {
-    padding: 0;
+    height: 94vh;
+    display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('../img/images/space-1920.jpg');
-    display: flex;
   }
+  p {
+    font-size: 0.6rem;
+    line-height: 1.6em;
+    margin-bottom: 0.3em;
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  .main-left {
+    @include desktop {
+      width: 50%;
+    }
+    .main-heading {
+      font-size: 2rem;
+      @include desktop {
+        font-size: 4rem;
+      }
+      .space-ventures {
+        margin: 0;
+
+        .space {
+          z-index: 2;
+          position: relative;
+          color: white;
+        }
+        .ventures {
+          color: $font-grey;
+          position: relative;
+          top: -0.85em;
+          left: 0.7em;
+          z-index: 1;
+          font-size: 4rem;
+          font-family: $secondary-font;
+          @include desktop {
+            font-size: 7rem;
+
+            top: -0.8em;
+            left: 0.1em;
+          }
+        }
+      }
+    }
+    .main-left-content {
+      margin-top: -3em;
+      h3 {
+        margin-bottom: 0.5em;
+      }
+      p {
+        padding: 0;
+        margin-top: 0;
+      }
+      blockquote {
+        margin: 0;
+        padding: 1.6em;
+        font-size: 0.9rem;
+        font-style: italic;
+        &::before {
+          content: '\201C';
+        }
+        &::after {
+          // content: '\201C';
+          content: '\201D';
+        }
+      }
+    }
+  }
+  .main-right {
+    @include desktop {
+      width: 50%;
+    }
+    img {
+      @include desktop {
+        float: right;
+        height: 10em;
+        transform: rotate(5deg);
+      }
+    }
+    a {
+      color: $font-pink;
+      font-size: 0.6rem;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        content: url('../img/icons/arrow-pink.svg');
+        position: absolute;
+        left: 14em;
+        top: 0.1em;
+        transition: left 0.1s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          left: 16em;
+        }
+      }
+    }
+  }
+
   .main-right-content #hidden-quote {
     display: none;
     @include desktop {
-      display: initial;
-      background: linear-gradient(45deg, #f3ec78, #af4261);
+      display: block;
+      background: rgb(209, 0, 160);
+      background: linear-gradient(
+        248deg,
+        rgba(209, 0, 160, 0.2091211484593838) 14%,
+        rgba(209, 0, 160, 0.1250875350140056) 26%,
+        rgba(255, 255, 255, 0.15309873949579833) 55%,
+        rgba(209, 0, 160, 0.11388305322128855) 88%,
+        rgba(209, 0, 160, 0.11948529411764708) 100%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -moz-background-clip: text;
@@ -28,87 +134,66 @@ main {
   .main-right #hidden-image {
     display: none;
     @include desktop {
-      display: initial;
+      display: block;
     }
   }
-  @include desktop {
-    .main-left,
-    .main-right {
-      width: 50%;
-      padding: 1em 5em;
-    }
-    .main-left-content {
-      margin-top: 7em;
-      h3 {
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 0.8rem;
-        line-height: 1.4rem;
-      }
-      blockquote {
-        font-size: 1.3rem;
-      }
-    }
-    .main-right-content {
-      margin-top: 7em;
-    }
-  }
-  .main-heading {
-    height: 20vh;
-    header {
-      height: 100%;
-      padding-top: 1.5em;
-    }
-    h2 {
-      font-size: 3.5em;
-      margin: 0;
-      @include desktop {
-        font-size: 6rem;
-      }
-      span {
-        font-family: $secondary-font;
-        color: $font-grey;
-        position: relative;
-        top: -1em;
-        left: 0.5em;
-        opacity: 0.9;
-      }
-    }
-  }
-  p {
-    font-size: 0.6rem;
-    margin: 0.3rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
-  blockquote {
-    font-size: 1rem;
-    margin: 2em 1em;
-    font-style: italic;
-    &::before {
-      content: '\201C';
-    }
-    &::after {
-      content: '\201C';
-      content: '\201D';
-    }
-  }
-  a {
-    color: $font-pink;
-    text-decoration: none;
-    position: relative;
-    &::after {
-      content: url('../img/icons/arrow-pink.svg');
-      position: absolute;
-      left: 14em;
-      transition: left 0.1s ease-in-out;
-    }
-    &:hover {
-      &::after {
-        left: 16em;
-      }
-    }
-  }
+
+  // @include desktop {
+  //   .main-left,
+  //   .main-right {
+  //     width: 50%;
+  //     padding: 1em 5em;
+  //   }
+  //   .main-left-content {
+  //     margin-top: 7em;
+  //     h3 {
+  //       font-size: 1.5rem;
+  //     }
+  //     p {
+  //       font-size: 0.8rem;
+  //       line-height: 1.4rem;
+  //     }
+  //     blockquote {
+  //       font-size: 1.3rem;
+  //     }
+  //   }
+  //   .main-right-content {
+  //     margin-top: 7em;
+  //   }
+  // }
+  // p {
+  //   font-size: 0.6rem;
+  //   margin: 0.3rem;
+  // }
+  // h3 {
+  //   font-size: 1.2rem;
+  // }
+  // blockquote {
+  //   font-size: 1rem;
+  //   margin: 2em 1em;
+  //   font-style: italic;
+  //   &::before {
+  //     content: '\201C';
+  //   }
+  //   &::after {
+  //     content: '\201C';
+  //     content: '\201D';
+  //   }
+  // }
+  // a {
+  //   color: $font-pink;
+  //   text-decoration: none;
+  //   position: relative;
+  //   &::after {
+  //     content: url('../img/icons/arrow-pink.svg');
+  //     position: absolute;
+  //     left: 14em;
+  //     transition: left 0.1s ease-in-out;
+  //   }
+  //   &:hover {
+  //     &::after {
+  //       left: 16em;
+  //     }
+  //   }
+  // }
 }
