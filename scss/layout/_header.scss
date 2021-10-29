@@ -16,7 +16,7 @@
     align-items: center;
     overflow: hidden;
     position: fixed;
-    background-color: rgba(238, 241, 242, 0.6);
+    // background-color: rgba(238, 241, 242, 0.6);
     @include desktop {
       height: 8%;
     }
@@ -36,6 +36,7 @@
         height: 0.3em;
         width: 2.2em;
         background-color: black;
+        outline: 1px solid white;
         border-radius: 1em;
         @include desktop {
           height: 0.5em;

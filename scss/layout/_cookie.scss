@@ -13,6 +13,14 @@
   margin-right: -50vw;
   @include desktop {
     height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   p {
     font-size: 0.8rem;
@@ -28,5 +36,9 @@
     width: 100%;
     border: none;
     cursor: pointer;
+    @include desktop {
+      width: 2em;
+      margin-top: 0;
+    }
   }
 }

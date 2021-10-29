@@ -4,10 +4,11 @@
 main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../img/images/space-480.jpg');
-  padding: 2em 8%;
+  padding: 0 8%;
   color: $font-white;
   @include desktop {
     height: 94vh;
+    gap: 4em;
     display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('../img/images/space-1920.jpg');
@@ -24,6 +25,7 @@ main {
   .main-left {
     @include desktop {
       width: 50%;
+      padding-top: 2em;
     }
     .main-heading {
       font-size: 2rem;
@@ -48,7 +50,6 @@ main {
           font-family: $secondary-font;
           @include desktop {
             font-size: 7rem;
-
             top: -0.8em;
             left: 0.1em;
           }
@@ -76,124 +77,70 @@ main {
           // content: '\201C';
           content: '\201D';
         }
+        @include desktop {
+          margin-top: 1em;
+          font-size: 1.4rem;
+        }
       }
     }
   }
   .main-right {
     @include desktop {
       width: 50%;
+      padding-top: 4em;
     }
-    img {
-      @include desktop {
-        float: right;
-        height: 10em;
-        transform: rotate(5deg);
+    .main-right-quote {
+      #hidden-quote {
+        font-style: italic;
+        display: none;
+        @include desktop {
+          display: block;
+          background: rgb(209, 0, 160);
+          background: linear-gradient(
+            248deg,
+            rgba(209, 0, 160, 0.2091211484593838) 14%,
+            rgba(209, 0, 160, 0.1250875350140056) 26%,
+            rgba(255, 255, 255, 0.15309873949579833) 55%,
+            rgba(209, 0, 160, 0.11388305322128855) 88%,
+            rgba(209, 0, 160, 0.11948529411764708) 100%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -webkit-text-fill-color: transparent;
+          font-size: 2.2rem;
+        }
       }
     }
-    a {
-      color: $font-pink;
-      font-size: 0.6rem;
-      text-decoration: none;
-      position: relative;
-      &::after {
-        content: url('../img/icons/arrow-pink.svg');
-        position: absolute;
-        left: 14em;
-        top: 0.1em;
-        transition: left 0.1s ease-in-out;
+    .main-right-content {
+      img {
+        display: none;
+        @include desktop {
+          display: block;
+          float: right;
+          height: 8em;
+          transform: rotate(5deg);
+        }
       }
-      &:hover {
+      a {
+        color: $font-pink;
+        font-size: 0.6rem;
+        text-decoration: none;
+        position: relative;
         &::after {
-          left: 16em;
+          content: url('../img/icons/arrow-pink.svg');
+          position: absolute;
+          left: 14em;
+          top: 0.1em;
+          transition: left 0.1s ease-in-out;
+        }
+        &:hover {
+          &::after {
+            left: 16em;
+          }
         }
       }
     }
   }
-
-  .main-right-content #hidden-quote {
-    display: none;
-    @include desktop {
-      display: block;
-      background: rgb(209, 0, 160);
-      background: linear-gradient(
-        248deg,
-        rgba(209, 0, 160, 0.2091211484593838) 14%,
-        rgba(209, 0, 160, 0.1250875350140056) 26%,
-        rgba(255, 255, 255, 0.15309873949579833) 55%,
-        rgba(209, 0, 160, 0.11388305322128855) 88%,
-        rgba(209, 0, 160, 0.11948529411764708) 100%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-      -webkit-text-fill-color: transparent;
-      font-size: 2.2rem;
-    }
-  }
-  .main-right #hidden-image {
-    display: none;
-    @include desktop {
-      display: block;
-    }
-  }
-
-  // @include desktop {
-  //   .main-left,
-  //   .main-right {
-  //     width: 50%;
-  //     padding: 1em 5em;
-  //   }
-  //   .main-left-content {
-  //     margin-top: 7em;
-  //     h3 {
-  //       font-size: 1.5rem;
-  //     }
-  //     p {
-  //       font-size: 0.8rem;
-  //       line-height: 1.4rem;
-  //     }
-  //     blockquote {
-  //       font-size: 1.3rem;
-  //     }
-  //   }
-  //   .main-right-content {
-  //     margin-top: 7em;
-  //   }
-  // }
-  // p {
-  //   font-size: 0.6rem;
-  //   margin: 0.3rem;
-  // }
-  // h3 {
-  //   font-size: 1.2rem;
-  // }
-  // blockquote {
-  //   font-size: 1rem;
-  //   margin: 2em 1em;
-  //   font-style: italic;
-  //   &::before {
-  //     content: '\201C';
-  //   }
-  //   &::after {
-  //     content: '\201C';
-  //     content: '\201D';
-  //   }
-  // }
-  // a {
-  //   color: $font-pink;
-  //   text-decoration: none;
-  //   position: relative;
-  //   &::after {
-  //     content: url('../img/icons/arrow-pink.svg');
-  //     position: absolute;
-  //     left: 14em;
-  //     transition: left 0.1s ease-in-out;
-  //   }
-  //   &:hover {
-  //     &::after {
-  //       left: 16em;
-  //     }
-  //   }
-  // }
 }
