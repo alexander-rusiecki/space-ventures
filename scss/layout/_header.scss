@@ -1,3 +1,4 @@
+@import '../abstracts/variables';
 @import '../abstracts/mixins';
 
 .hero {
@@ -8,6 +9,8 @@
     @include background-image('../img/images/adam-miller-1920.jpg');
   }
   .hamburger-section {
+    position: relative;
+    z-index: 1000;
     height: 5%;
     width: 100%;
     padding: 0.5em 0;
@@ -16,7 +19,6 @@
     align-items: center;
     overflow: hidden;
     position: fixed;
-    // background-color: rgba(238, 241, 242, 0.6);
     @include desktop {
       height: 8%;
     }
@@ -29,6 +31,9 @@
       justify-content: space-around;
       align-items: center;
       cursor: pointer;
+      position: relative;
+      z-index: 1001;
+
       @include desktop {
         height: 80%;
       }
@@ -36,7 +41,7 @@
         height: 0.3em;
         width: 2.2em;
         background-color: black;
-        outline: 1px solid white;
+        border: 1px solid white;
         border-radius: 1em;
         @include desktop {
           height: 0.5em;
@@ -76,7 +81,7 @@
         margin: 0;
         @include desktop {
           margin-top: 0.6em;
-          font-size: 6.5rem;
+          font-size: $font-regular * 6.5;
           line-height: 1.3em;
         }
         span {
@@ -95,17 +100,17 @@
       position: relative;
       text-decoration: none;
       color: inherit;
-      font-size: 0.6rem;
+      font-size: $font-regular * 0.6;
       @include desktop {
         margin-top: -2em;
         margin-left: 17em;
-        font-size: 1rem;
+        font-size: $font-regular;
       }
       &::after {
         content: url('../img/icons/arrow-black.svg');
         position: absolute;
         left: 7.5em;
-        top: 0.2em;
+        top: 0.1em;
         transition: left 0.1s ease-in-out;
       }
       &:hover {
