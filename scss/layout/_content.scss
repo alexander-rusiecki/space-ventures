@@ -48,7 +48,6 @@ main {
           color: $font-grey;
           position: relative;
           opacity: 0.8;
-
           top: -0.85em;
           left: 0.7em;
           z-index: 1;
@@ -77,9 +76,11 @@ main {
         font-style: italic;
         &::before {
           content: '\201C';
+          color: $font-grey;
         }
         &::after {
           content: '\201D';
+          color: $font-grey;
         }
         @include desktop {
           margin-top: 1em;
@@ -99,40 +100,28 @@ main {
         display: none;
         @include desktop {
           display: block;
-          background: $font-pink;
-          background: $font-pink;
+          margin-left: 0;
+          padding-right: 3em;
+          font-size: $font-regular * 2.2;
           background: linear-gradient(
-            350deg,
-            hsl(314, 100%, 41%) 0%,
-            hsl(0, 0%, 100%) 40%,
-            hsl(0, 0%, 100%) 60%,
-            hsl(314, 100%, 41%) 100%
+            170deg,
+            hsla(314, 100%, 41%, 0.2) 20%,
+            hsla(0, 0%, 100%, 0.2) 45%,
+            hsla(314, 100%, 41%, 0.2) 100%
           );
+          background-clip: text;
           -webkit-background-clip: text;
           -moz-background-clip: text;
           -o-background-clip: text;
           -webkit-text-fill-color: transparent;
           -moz-text-fill-color: transparent;
           -o-text-fill-color: transparent;
-
-          background-clip: text;
-          -webkit-background-clip: text;
-          -moz-background-clip: text;
-          -o-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -moz-background-clip: transparent;
-          -o-background-clip: transparent;
-          font-size: $font-regular * 2.2;
-          margin-left: 0;
-          padding-right: 3em;
-          opacity: 0.2;
         }
       }
     }
     .main-right-content {
       position: relative;
       z-index: 2;
-
       img {
         display: none;
         @include desktop {
